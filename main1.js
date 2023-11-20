@@ -1,91 +1,178 @@
- 
+// age of user
+let name = 'omar';
+let age = 22;
+const yearofbirth= 2001;
 
-let name ='camry'
-let color = 'white'
-let currentSpeed = 0
-function move (speed) {
-carCurrentSpeed = speed
-return `The ${name} is moving at speed of $ {carCurrentSpeed}km per hour`}
-function stop() {
-carCurrentSpeed = 0
-return`The ${name} stopped`
+console.log(yearofbirth);
+
+age=23;
+console.log(age);
+
+
+
+console.log(typeof age);
+
+console.log(typeof name);
+
+//////////boolean if it true or not 
+
+let a1 = 2>3;
+console.log (a1);
+
+let a2 = 2<3;
+console.log (a2);
+
+console.log(typeof a1);
+
+//////////// string 
+
+
+let message = ' welcome to my world ';
+
+console.log(typeof message);
+
+///////////  Template Literals
+let message1 = `welcome to my world` ;
+
+console.log( message1);
+
+//////// undified 
+ let xc;
+ console.log(xc);
+
+ ////// number 
+
+ let value = -7;
+ console.log(typeof value);
+ console.log(value);
+
+
+ /////////// nan
+console.log(value * 'as');
+
+///////////////// null
+
+let value1 =null;
+console.log(value1);
+
+///////////// string 
+
+let lan = " hi everyone";
+console.log(lan);
+console.log(lan.length);
+////////////////
+let lan1= lan  +" in java";
+
+console.log(lan1);
+//////////////// brcket notation
+
+ console.log(lan[5]);
+
+ /////////// Arryas
+ let colors = ['red','green','blue'];
+
+ console.log(colors);
+ console.log(colors[2]);
+
+ console.log(colors.length);
+
+
+ ///////////
+ console.log(colors.includes('red'));
+ console.log(colors.includes('black'));
+
+/////////////
+
+colors.unshift('black');
+colors.unshift('pink');
+console.log(colors);
+
+colors.shift();
+console.log(colors);
+
+colors.push('pink');
+colors.push('white');
+console.log(colors);
+
+colors.pop();
+console.log(colors);
+
+
+console.log(Array.isArray(colors));
+
+////////////////
+
+let result = message.split(' ');
+console.log(result);
+/////// if 
+
+
+
+let age1 = 15;
+
+if (age1<12){
+
+    console.log(' sorry you cannt join' );
 }
- 
-console. log (move (100))
-//////////////////////////
+ else {
+    console.log('welcome');
+ }
 
-const carl = {
-    name: 'camry',
-     color1: 'white',
-      currentSpeed: 0,
-    move: function (speed) {
-    this.currentSpeed = speed
-    return 'The ${this. name} is moving at speed of ${this.currentSpeed}km per hour'
-    },
-    stop: function() {
-    this.currentSpeed = 0
-    return
-    return`The ${this. name} stopped`
-    }}
+//////////////////////
+let colornum = 1;
 
-    ////////////
-    class Car {
+switch(colornum) {
 
-             static numberOfCars
+case 1: 
+ console.log('red')
+  break;
+case 2: 
+ console.log('blue')
+ break;
+case 3: 
+ console.log('black')
+ break;
 
-        constructor (name, color, currentSpeed) {
-        this.name = name
-        this.color = color
-        this.currentSpeed = currentSpeed}
-    
-    
-    
-        static incrementNumber0fCars () {
-            Car.numberOfCars++
-            }
-            
-    
-    
-    
-    
-    }
+default :
+console.log('else')
+ break;
 
-
-        const car11 = new Car(' camry','white', 0)
-
-           const car22 = new Car('corella','black', 0)
-console.log (car1. move (50))
-console.log (car2. move (70))
-
-console.log (Car.numberOfCars)
-
-
-
-
-
-
-
-//////////////////
-
-let user1= {
-firstName:"Fatimah",
-LastName: "Khalid",
 }
-let printFullName = function(){
-console. Log ("Hello,"+this. firstName+" "+this. lastName);
+
+/////////// loop
+
+for(let i = 1; i<=5;i++){
+
+    console.log(1);
 }
-printFullName.call(user1);
 
-printFullName.apply;(user1);
+for(let i = 5; i>=1;i--){
 
-  newFunction = printFulName.bind (user1, "25")
-  newFunction();
-  
+    console.log(1);
+}
 
-  let name2 = function (n){
-    console. log(n);
-    }("Reem" ) 
+////////////////////////
+
+const m1 = ' welcome';
+
+for (const iterator of m1) {
+    console.log(iterator);
+}
+
+let i =0;
+while(i<3){
+    console.log('blue');
+    i++;
+}
 
 
-    let area = rectangleArea (4, 2);
-console. log (area) 
+
+function print(){
+
+    console.log('blue');
+
+    console.log(' red');
+    console.log('green');
+}
+
+print();
