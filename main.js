@@ -1,123 +1,203 @@
-const myString = 'I Love JavaScript'
-const regex = /Kotlin/
-const containsRegex = regex. test (myString)
+const d = new Date(2020,9,17)
 
-//////////////////////////////
-
-
-const myString1 = 'I Love JavaScript'
-const myRegex = /JavaScript/
-let newString = myString.replace (myRegex,
-'Kotlin')
-console.log(newString)
-//////////
+console.log(d.getDay);
+console.log(d.getDate);
+console.log(d.getMonth);
 
 
-const myString2 = 'I Love JavaScript'
-let newRegex = myString. search(/JavaScript/)
-console. log (newRegex)
-
-////////////////////////
+//////////////
+const number = Math.ceil(9.12)
+console.log(number);
 
 
-const str = 'RegExr was created by gskinner.com,and is proudly hosted by Media Temple. Edit the Expression and Text to see matches. Roll over matches or the expression for details. PCRE & JavaScript flavors of RegEx are supported. Validate your expression with Tests mode. The side bar includes a Cheatsheet, full Reference, and Help. You can also Save & Share with the Community, and view patterns you create or favorite in My Patterns. Explore results with the Tools below. Replace & List output custom results. Details lists capture groups. Explain describes your expression in plain English.';
-let myRegex2 = str.match (/and/g)
-console. log (myRegex. Length)
 
+/////////////////////
+const number1 = Math.floor(9.12);
+console.log(number1);
+
+////////
+
+const number2 = Math.round(9.12);
+console.log(number2);
+
+/////////
+const number3 = Math.abs(-9.12);
+console.log(number3);
+
+////////////////
+const number4 = [-3,5,6,8,9];
+const num = Math.min(...number4);
+console.log(num);
+////////
+
+const number5 = [-3,5,6,8,9];
+const num2 = Math.max(...number5);
+console.log(num2);
+
+////////////////////
+
+const str ='1.45';
+const floatNumber= parseFloat(str);
+console.log(floatNumber);
+
+//////////////
+
+const str1 ='1.45';
+const floatNumber1= parseInt(str);
+console.log(floatNumber1);
 //////////////////////////
+const number6= Math.trunc(1,43);
+console.log(number6);
 
+/////////////
+const isInt= Number.isInteger(number6);
+console.log(isInt);
 
-console. log (1)
-console. log (2)
-setTimeout (() => {
-console. log (3)
-}, 3000)
-console. log (4)
-console. log (5)
+/////////////////
 
-///////////////////////
-
-
-
-
-console. log( 'Start ' )
-function userInfo(name){
-setTimeout( () => {
-console.log('** User info received **')
-return name
-},3000)
+function sq(number){
+    if (isNaN(number)) 
+    return 'INVALID '
+return number*number
 }
-let userName = userInfo('Khalid')
-console.log (userName)
-console.Log (' End')
+
+console.log(sq('a'))
+
+///////////
+const number7 = 2** 3;
+console.log(number7);
+
+/////////////
+const squereroot = Math.sqrt(number7);
+console.log(squereroot);
+
+//////////////////
+console.log(Math.sign(number7));
 
 
-///////////////////////////////////////
-let ages = [25, 30, 32]
-let [firstAge, secondAge, thirdAge] = ages
-console. log(firstAge, secondAge, thirdAge)
+const rad = Math.random();
+console.log(rad);
 
+////////////////
 
-///////////////////
-
-let first = 5, second = 7;
-[first, second] = [first,
-first]
-console. log(first, second )
-
-let colors = ['red', 'green']
-let [firstColor, secondColor,
-thirdColor] = colors
-console. log(firstColor, secondColor, thirdColor)
-
-
-//////////////////////////////////////////
-
-
-
-let color4 = ['red', 'green'];
-[colors [0], colors [1]] = ['blue','white','black']
-console. log (colors)
-
-
-///////////////////////
-
-
-
-
-
-let student = {
-    name: 'Ali',
-    age : 25
-}
-    let {age: yourAge, name: yourName} = student
-    console. log (yourName, yourAge)
-
-
-
-
-    ///////////////////////////////////
-
-
-    let first1 = [1, 2, 3]
-        let second1 = [4, 5]
-        let third = [...first1,... second1]
-        console. log (third)
-
-
-    /////////////////
-
-    function sum(first, second, ...others){
-        console. log (...others)
-        return first + second
+function sum(firstNumber, secondNumber){
+    return `(${firstNumber + secondNumber}]`
     }
-        6
-        console. log(sum(1, 2, 6, 80, 75))
+
+    function sub(firstNumber, secondNumber){
+    return `(${firstNumber - secondNumber}]`
+    }
+    console.log(sub (1, 2))
+
+
+    /////////////////////////
+
+    function operation(firstNumber, secondNumber, opCallback){
+        return `[:[${opCallback(firstNumber, secondNumber)}]:]`
+        }
+        console. log(operation (5, 2, sum))
+        /////////////
+
+        function mul(firstNumber, secondNumber){
+            return  firstNumber *secondNumber 
+            }
+            console.log(mul (1, 2))
+/////////////////////////////////////
+            console. log(operation (5, 2, function (firstNumber, secondNumber){
+                return firstNumber + secondNumber 
+            }))
+        ////////////////
+
+
+        console. log(operation (5, 2, (firstNumber, secondNumber) => firstNumber + secondNumber 
+        ))
+
+        ///////////////////////////////////
+        const sum1= (firstNumber, secondNumber) => firstNumber + secondNumber 
+        console.log(operation (5,2,sum));
 
 
         /////////////////////////
 
+        const colors = ['red','blue','green'];
+        colors.forEach(function(currentValue,index,array){
+console.log(index,currentValue);
 
+        })
+
+        /////////////////////////
+
+
+        const ages = [11,12,13,54]
+        const hasAd= ages.some(function(element){
+            return element >= 18
+        })
+        console.log(hasAd);
+        ///////////////////////////////
+
+        const areAd = ages.every(function(element){
+            return element >= 18
+        })
+        console.log(areAd);
+
+        ///////////////
+
+        const isred = colors.includes('red')
+        console.log(isred);
+
+        //////////////////
+
+        const index = colors.indexOf('red')
+        console.log(index)
+        /////////////////
+        const index1 = colors.lastIndexOf('red')
+        console.log(index1)
+
+
+        /////////////
 
 
         
+        const ages1 = [11,12,13,54]
+        const hasAd1= ages.findIndex(function(element){
+            return element >= 18
+        })
+        console.log(hasAd1);
+
+        ///////
+        const ages2 = [11,12,13,54]
+        const hasAd2= ages.find(function(element){
+            return element % 3 ===0
+        })
+        console.log(hasAd2);
+
+        /////////////
+
+        const add = c=ages.slice(0,2)
+        console.log(add);
+        ///////////////////
+         const add1 = c=ages.splice(1,2)
+        console.log(add1);
+
+
+////////////////////////////////////////
+const strcolors = colors.join()
+console.log(strcolors)
+////////////////
+
+const strcolors1 = colors.reverse()
+console.log(strcolors1)
+
+/////////////////////////
+
+
+const strColors = 'red ; green ; blue ; black'
+const arrColors = strColors.split()
+console. log (arrColors) 
+
+//////////////////////////////////
+const numbers = [2, 4, 1, 3, 5]
+const total = numbers. reduce (function (accumulator, currentValue, index, array) {
+return accumulator + currentValue
+}, 100)
+console. log (total);
